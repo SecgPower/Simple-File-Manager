@@ -31,14 +31,7 @@
 2. 再打包最终成品：
     将 `SecgFileManager.exe`、`NSudo.exe`、`NSudoC.exe`、`NSudoG.exe`、`NSudo.json` 复制到项目根目录，然后执行：
     ```powershell
-pyinstaller -w --onefile --version-file ver.txt `
---add-data "spr.bat;." `
---add-data "NSudo.exe;." `
---add-data "NSudo.json;." `
---add-data "NSudoC.exe;." `
---add-data "SecgFileManager.exe;." `
---add-data "NSudoG.exe;." `
-loader.py
+    pyinstaller -w --onefile --version-file ver.txt --add-data "spr.bat;." --add-data "NSudo.exe;." --add-data "NSudo.json;." --add-data "NSudoC.exe;." --add-data "SecgFileManager.exe;." --add-data "NSudoG.exe;." loader.py
     ```
     最终可执行文件将生成在 `dist` 目录。
 
