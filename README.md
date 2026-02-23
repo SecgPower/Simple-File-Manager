@@ -2,6 +2,7 @@
 
 一个可以适配任意权限的简易文件管理器（持续更新）
 
+[发布页面](https://github.com/SecgPower/Simple-File-Manager/releases/)
 ---
 
 ## 快速开始
