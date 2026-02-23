@@ -9,28 +9,28 @@
 ### 1. 环境准备
 - 安装 Python 3.8+
 - 安装打包程序：
-  ```bash
+  ```powershell
   pip install pyinstaller
   ```
 - 从NSudo的 [发布页面](https://github.com/M2TeamArchived/NSudo/releases) 下载NSudo
 - 将 `NSudo.exe` 和 `NSudo.json` 放置在项目根目录
 
 ### 2. 本地运行
-```bash
-python loader.py
+```cmd
+"<你的python解释器路径>" SecgFileManager.py
 ```
 
 ### 3. 打包构建
 
 1. 先打包核心程序：
-    ```bash
+    ```powershell
     pyinstaller --onefile SecgFileManager.py
     ```
     生成的 `SecgFileManager.exe` 会出现在 `dist` 目录。
 
 2. 再打包最终成品：
     将 `SecgFileManager.exe`、`NSudo.exe`、`NSudoC.exe`、`NSudoG.exe`、`NSudo.json` 复制到项目根目录，然后执行：
-    ```bash
+    ```powershell
 pyinstaller -w --onefile --version-file ver.txt `
 --add-data "spr.bat;." `
 --add-data "NSudo.exe;." `
